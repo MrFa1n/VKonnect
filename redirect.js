@@ -10,15 +10,19 @@ if (currentUrl === 'vk.com') {
     window.onload = function () {
         document.getElementById("l_nwsf").remove();
         document.getElementById("l_svd").remove();
-        if (window.location.pathname === '/video') {
-            const portalNav = document.querySelector('.PortalNavigation');
-            portalNav.addEventListener('click', function () {
-                document.getElementById("l_nwsf").remove();
-                document.getElementById("l_svd").remove();
-            });
-        }
     };
 }
+
+if (window.location.pathname === '/video') {
+    window.onload = function () {
+        const portalNav = document.querySelector('.PortalNavigation');
+        portalNav.addEventListener('click', function () {
+            document.getElementById("l_nwsf").remove();
+            document.getElementById("l_svd").remove();
+        });
+    }
+}
+
 if (window.location.pathname === '/feed') {
     window.location.href = "https://vk.com/im";
 }
