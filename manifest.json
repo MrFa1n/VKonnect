@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "VKonnect",
+    "description": "VKonnect is a wordplay combining \"VK\" and \"connect\", which implies the use of VK as a messenger.",
+    "version": "1.0",
+    "icons": {
+        "128": "/images/you_mental_icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://vk.com/feed*",
+                "https://vk.com/clips*",
+                "https://*.vk.com/feed*",
+                "https://*.vk.com/clips*",
+                "https://vk.com/*",
+                "https://m.vk.com/*"
+            ],
+            "js": [
+                "redirect.js"
+            ]
+        }
+    ]
+}
